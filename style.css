@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(51, 51, 51, 0.9);
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+.home {
+    background: linear-gradient(220deg, black, blue);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease;
+}
+.about, .projects, .contact, .skill {
+    padding: 50px 20px;
+    text-align: center;
+}
+.contact{
+    min-height: 100vh;
+}
+.project-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+@media screen and (max-width: 768px) {
+    .project-gallery {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+    .home {
+        padding: 50px 20px;
+    }
+
+    .home h1 {
+        font-size: 1.5em;
+    }
+
+    .home p {
+        font-size: 1em;
+    }
+
+    .poto {
+        height: 200px;
+    }
+    .about, .projects, .contact, .skill {
+        padding: 20px 10px;
+    }
+    .project-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    form {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    form label {
+        font-size: 1em;
+    }
+
+    form input, form textarea {
+        font-size: 0.9em;
+    }
+
+    form button {
+        font-size: 1em;
+        padding: 10px;
+    }
+    footer {
+        padding: 15px 0;
+        font-size: 0.9em;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-left {
+    opacity: 0;
+    animation: slideInLeft 1.5s forwards;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-right {
+    opacity: 0;
+    animation: slideInRight 1.5s forwards;
+}
+.hover-button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-button:hover {
+    background-color: #3e8e41;
+    transform: translateY(-3px);
+}
+.poto {
+    height: 350px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

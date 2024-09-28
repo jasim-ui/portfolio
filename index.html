@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+</head>
+<body>
+    <header>
+        <div class="logo">My Portfolio</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <img src="./Images/pho.jpg" class="poto">
+        <h1 class="fade-in">Welcome to My Portfolio</h1>
+        <p class="fade-in">Hi, I'm Jasim, a passionate web developer.</p>
+    </section>
+
+    <section id="about" class="about">
+        <h2 class="slide-in-left">About Me</h2>
+        <p class="fade-in"> Hi, I'm a passionate beginner developer with a focus on learning HTML, CSS, and JavaScript.<br>
+            I love exploring new web technologies and continuously improving my skills in front-end development.<br>
+            My goal is to build responsive, user-friendly websites and applications. Stay tuned for more projects as I continue to grow!</p>
+    </section>
+    <section id="skill" class="skill">
+        <h2 class="slide-in-left">Skills</h2>
+        <img class="i" src="./Images/html.jpeg" alt="">
+        <img class="i" src="./Images/css.jpeg" alt="">
+        <img class="i" src="./Images/js.jpeg" alt="">
+        <img class="i" src="./Images/bootstrap.jpeg" alt="">
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="slide-in-right">Projects</h2>
+        <div class="project-gallery">
+            <div class="project fade-in">
+            <img src="./Images/poto1.png" alt="" height=200px>
+                <p>Project 1</p>
+            </div>
+            <div class="project fade-in">
+                <img src="./Images/poto2.jpg" alt="" height=200px >
+                <p>Project 2</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="slide-in-left">Contact Me</h2>
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit" class="hover-button" onclick="sendMail()">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Jasim. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="pwt4.js"></script>
+</body>
+</html>
